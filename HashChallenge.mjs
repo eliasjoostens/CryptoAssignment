@@ -30,7 +30,7 @@ fetch('https://g5qrhxi4ni.execute-api.eu-west-1.amazonaws.com/Prod/hash',{
                 byteArray = voegSamen(nieuwePrefix,message)
                 teller++
                 hash = sodium.crypto_generichash(_sodium.crypto_generichash_BYTES, byteArray)
-                console.log("Poging" + teller)
+                console.log("Poging " + teller)
             } while (!(hash[0] === 0 && hash[1] === 0))
             base64NieuwePrefix = _sodium?.to_base64(nieuwePrefix, _sodium?.base64_variants.ORIGINAL)
             try {
